@@ -1,0 +1,19 @@
+--DROP TABLE Account;
+IF (NOT EXISTS (SELECT 1 
+                 FROM INFORMATION_SCHEMA.TABLES 
+                 WHERE TABLE_SCHEMA = 'dbo' 
+                 AND  TABLE_NAME = 'Account'))
+BEGIN
+	CREATE TABLE Account
+	(
+		[Id] INT CONSTRAINT PK_Account PRIMARY KEY IDENTITY(2000000001,1),
+		[CustomerId] INT CONSTRAINT FK_Account_CustomerId FOREIGN KEY REFERENCES Customer(Id) NOT NULL,
+		[BankId] INT CONSTRAINT FK_Account_BankId FOREIGN KEY REFERENCES Bank(Id) NOT NULL,
+		[BranchId] INT CONSTRAINT FK_Account_BranchId FOREIGN KEY REFERENCES BankBranch(Id) NOT NULL,
+		[AccountType] VARCHAR(500) NOT NULL,
+		[IsActive] BIT NOT NULL,
+		[Balance] MONEY NOT NULL,
+		[CreatedDate] DATETIME NOT NULL,
+		[UpdatedDate] DATETIME NOT NULL
+	);
+END

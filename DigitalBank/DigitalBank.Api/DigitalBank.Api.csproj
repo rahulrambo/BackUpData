@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DigitalBank.Business.Models\DigitalBank.Business.Models.csproj" />
+    <ProjectReference Include="..\DigitalBank.Business\DigitalBank.Business.csproj" />
+    <ProjectReference Include="..\DigitalBank.Core\DigitalBank.Core.csproj" />
+    <ProjectReference Include="..\DigitalBank.Entities\DigitalBank.Entities.csproj" />
+    <ProjectReference Include="..\DigitalBank.Infrastructure\DigitalBank.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

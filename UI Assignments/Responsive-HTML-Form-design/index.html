@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <form id="myForm" name="clientForm">
+        <div class="heading">
+            <h1>Client Details</h1>
+            <p>Enter the details of all incoming clients.</p>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Client Name<span class="star">*</span></label>
+            </div>
+            <div class="col2">
+                <input type="text" required minlength="5" maxlength="50" name="c_name" id="client_name">
+                <p class="client-detail" id="client-name"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Company <span class="star">*</span></label>
+            </div>
+            <div class="col2">
+                <input type="text" required minlength="5" maxlength="50" id="company_name">
+                <p class="client-detail" id="company-name"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Department<span class="star">*</span></label>
+            </div>
+            <div class="col2">
+                <select name="dept" id="dept" required>
+                    <option value="">-Select-</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Web Development">Web Development</option>
+                </select>
+                <p class="client-detail" id="dept-section"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Preferred contact method<span class="star">*</span></label>
+            </div>
+            <div class="col2">
+                <div class="radio">
+                    <div class="radio-btn">
+                        <div class="radio1">
+                            <input type="radio" name="mail" id="mailbtn" value="Email" checked required>
+                        </div>
+                        <div class="radio2">
+                            <label for="">Email</label>
+                        </div>
+                    </div>
+
+                    <div id="mailsection">
+                        <input type="text" id="emailPhoneInput">
+                        <p id="mail-section">Email<span class="star">*</span></p>
+                        <p id="mailphonedata"></p>
+                    </div>
+
+                    <div class="radio-btn">
+                        <div class="radio2">
+                            <input type="radio" name="mail" id="phonebtn" value="Phone" required>
+                        </div>
+                        <div class="radio2">
+                            <label for="">Phone</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row comadd">
+            <div class="col1">
+                <label for="">Company address<span class="star">*</span></label>
+            </div>
+            <div class="col2 street">
+                <input type="text" id="street_add" required>
+                <span>Street Address</span>
+                <p class="client-detail" id="street-add"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col2 add-line2 street">
+                <input type="text" id="line_add" required>
+                <span>Address Line 2</span>
+                <p class="client-detail" id="line-add"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col2 city">
+                <input type="text" id="city_add" required>
+                <span>City</span>
+                <p class="client-detail" id="city-add"></p>
+            </div>
+            <div class="col2 state">
+                <input type="text" id="state_add" required>
+                <span>State/Region/Province</span>
+                <p class="client-detail" id="state-add"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col2 city">
+                <input type="text" pattern="\d{6}" id="zip_code" required>
+                <span>Postal/zip Code</span>
+                <p class="client-detail" id="zip-code"></p>
+            </div>
+            <div class="col2 state">
+                <select name="country" id="country" required>
+                    <option value="">-Select-</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                </select>
+                <span class="c-select">Country</span>
+                <p id="country-add" class="client-detail"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Company Website<span class="star">*</span></label>
+            </div>
+            <div class="col2">
+                <input type="url" id="company_web" required>
+                <p class="client-detail" id="company-web"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Company logo</label>
+            </div>
+            <div class="col">
+                <input type="file" style="font-weight:700;" id="file">
+                <div class="upload-icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Billing Cycle<span class="star">*</span></label>
+            </div>
+            <div class="col3">
+                <input type="date" name="dates" id="dates">
+                <input type="text" name="date" id="billing_cycle" required
+                    pattern="^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$">
+                <span><i class="fa fa-calendar" aria-hidden="true" style="color:rgb(173, 173, 147);"></i>
+                </span>
+                <p>dd-MM-yyyy</p>
+                <p class="client-detail" id="billing-cycle"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col1">
+                <label for="">Additional Information</label>
+            </div>
+            <div class="col4">
+                <textarea name="t-area" id="t_area" cols="30" rows="10" required maxlength="200"></textarea>
+                <p class="client-detail" id="t-area"></p>
+            </div>
+        </div>
+        <div class="submit">
+            <button type="button" id="submitbtn">Submit</button>
+        </div>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Client Name</th>
+                <th>Company Name</th>
+                <th>Department</th>
+                <th>Contact Method(Email/Phone)</th>
+                <th>Company Address</th>
+                <th>Billing Cycle</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</body>
+<script src="media.js"></script>
+
+</html>

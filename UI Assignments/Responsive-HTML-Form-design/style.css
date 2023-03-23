@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+.heading {
+    background-color: #40608E;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+.heading h1 {
+    font-size: 2.3em;
+}
+.heading p {
+    font-size: 1.3em;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3% 4% 0px 4%;
+    position: relative;
+}
+.col2 span,
+.col3 p {
+    color: #BABABA;
+}
+.col2 input {
+    width: 100%;
+    margin-top: 4%;
+    padding: 1.5%;
+}
+.star {
+    color: red;
+    font-size: 1.2em;
+}
+.col2 select {
+    width: 100%;
+    margin: 4% 0px;
+    padding: 1.5%;
+}
+.radio {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.radio-btn {
+    padding-top: 3.5%;
+    width: 50%;
+    display: flex;
+}
+.radio2 {
+    padding-left: 5%;
+}
+.col {
+    width: 100%;
+    margin-top: 4%;
+    padding: 4%;
+    border: 1px dashed rgb(134, 124, 124);
+}
+.col input {
+    border: none;
+    padding: 2%;
+    outline: none;
+}
+.upload-icon {
+    float: right;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    border-radius: 15px;
+    background-color: rgb(238, 252, 252);
+}
+.col3 {
+    position: relative;
+}
+.col3 input {
+    width: 91%;
+    margin-top: 4%;
+    padding: 1.5%;
+}
+#dates {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+.col3 span {
+    padding-left: 2%;
+}
+#t_area {
+    width: 100%;
+    height: 5em;
+    margin-top: 4%;
+}
+.submit {
+    text-align: center;
+    padding-top: 15%;
+}
+.submit button {
+    color: white;
+    background-color: blueviolet;
+    padding: 1.5%;
+    width: 20%;
+    border: 1px solid black;
+}
+table {
+    display: none;
+}
+input,
+#dept,
+textarea {
+    outline: 0;
+    border: 1px solid rgba(128, 128, 128, 0.525);
+}
+input:focus {
+    outline: 0;
+    box-shadow: 1px 1px 1px 1px lightskyblue;
+}
+input[type=file]::-webkit-file-upload-button {
+    border: none;
+    background-color: white;
+}
+input[type=file] {
+    color: white;
+}
+.client-detail {
+    margin-top: 5px;
+    display: none;
+    color: red;
+    font-size: 13px;
+}
+.comadd {
+    padding-top: 11%;
+}
+#mailsection {
+    position: absolute;
+    margin-top: 7%;
+    width: 70%;
+    z-index: 1;
+}
+#mailphonedata {
+    color: red;
+    font-size: 13px;
+}
+
+@media (min-width:1024px) {
+    body {
+        background-image: linear-gradient(135deg, rgb(169, 134, 134), #8b7a69, rgb(119, 91, 91))
+    }
+    form {
+        margin: auto;
+        width: 54%;
+        background-color: white;
+    }
+    .row {
+        width: 100%;
+        flex-direction: row;
+    }
+    .col2 input {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .col1 {
+        width: 32%;
+    }
+    .col2 {
+        width: 58%;
+    }
+    .col2 select {
+        margin: 0px;
+    }
+    .radio-btn {
+        padding-top: 1%;
+    }
+    .street {
+        width: 68%;
+    }
+    .add-line2 {
+        margin-left: 32%;
+    }
+    .city {
+        margin-left: 32%;
+    }
+    .state {
+        margin-left: 2%;
+    }
+    .col {
+        width: 68%;
+        margin-top: 0px;
+        padding: 4%;
+    }
+    .col3 {
+        width: 34%;
+        margin-top: -10px;
+    }
+    .col3 span {
+        padding: 12px 0px 0px 1%;
+        position: absolute;
+    }
+    #t_area {
+        width: 30em;
+        height: 8em;
+        margin-top: 0px;
+    }
+    .submit button {
+        margin: 2% 0px;
+    }
+    table {
+        display: block;
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        background-color: white;
+        border-collapse: collapse;
+    }
+    tr,th,td {
+        width: 15%;
+        border: 2px solid rgb(16, 14, 14);
+    }
+}
